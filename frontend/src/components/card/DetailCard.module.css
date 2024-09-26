@@ -1,0 +1,81 @@
+.wrapper {
+    position: relative;
+    width: 240px;
+    /* box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.107); */
+    border: 1px solid transparent;
+}
+
+.wrapper:hover {
+    border: 1px solid black;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    transform: translateY(-3px);
+}
+
+.image img, .fake_img {
+    width: 100%;
+    height: 300px;
+    border: 1px solid rgba(0, 0, 0, 0.31);
+}
+
+.fake_img {
+    font-size: 5rem;
+    font-family: 'Satisfy', cursive;
+}
+
+.content {
+    padding: 10px 10px 0 10px;
+}
+
+.content p {
+    word-break: break-all;
+    margin-bottom: 0;
+    font-weight: 500;
+    font-family: 'Lobster', cursive;
+    font-size: 1.2rem;
+}
+
+.price {
+    font-family: 'Lobster', cursive;
+    color: var(--heavy_pink);
+    width: 100%;
+    margin-top: 2px;
+}
+
+@keyframes showBtn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.toggle_buy button{
+    border: none;
+    outline: none;
+    padding: 10px 0;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: black;
+    color: white;
+    font-family: 'Roboto Slab', serif;
+
+}
+
+.wrapper .toggle_buy button {
+    display: none;
+    opacity: 0;
+}
+
+.wrapper:hover .toggle_buy button {
+    display: block;
+    opacity: 1;
+    animation: showBtn 0.5s ease both;
+}
+
+.wrapper:hover .fake_img {
+    color: var(--heavy_pink);
+    transition: all 0.5s ease-out;
+}
+
+.icon {
+    padding-right: 10px;
+}

@@ -1,0 +1,136 @@
+/* Navbar CSS */
+.search_wrapper {
+    /* padding: 0 0 10px 5px; */
+    /* margin-top: 10px; */
+    position: relative;
+}
+
+@keyframes showDiv {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+  
+.nav_search {
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    width: 180px;
+    padding: 0 0 5px 10px;
+    caret-color: var(--heavy_pink);
+    position: absolute;
+    display: none;
+    transition: 1s;
+    right: -100px;
+    
+}
+
+.search_wrapper:hover .nav_search {
+    display: block;
+    animation: showDiv 1s ease-in both;
+    right: 30px;
+}
+
+.nav_search::placeholder:focus {
+    font-weight: 200;
+}
+
+.search_btn {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding-top: 2px;
+}
+
+.icon, .icon_search {
+    color: black;
+    margin: 0 10px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.search_box {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.search_box:hover {
+    /* transform: translateY(-5px); */
+    background-color: black;
+    transition: all 0.3s ease-out;
+}
+
+.icon_search:hover {
+    color: white;
+    transition: all 0.1s;
+
+}
+
+.badge {
+    position: relative;
+    font-size: 0.7rem;
+    left: -12px;
+    top: -10px;
+}
+
+.navDropdown {
+    width: 100%;
+}
+
+.navlink {
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.navlink:hover {
+    cursor: pointer;
+    color: var(--heavy_pink) !important;
+    transition: transform 0.2s ease;
+    transform: translateY(4px);
+}
+
+.navbar {
+    background-color: white;
+    box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+}
+
+.navbar_body {
+    padding: 5px 10px;
+}
+
+.brand {
+    font-family: 'Satisfy', cursive;
+    position: relative;
+    display: block;
+    font-size: 2rem;
+}
+
+.brand::before, .brand::after {
+    border:  1px solid white;
+    transition: all 0.4s;
+    content: '';
+    height: 0;
+    position: absolute;
+    width: 0%;
+    background-color: white;
+}
+
+.brand::before {
+    border-top: 1px solid transparent;
+    top: -4px;
+    left: 0px;
+}
+
+.brand::after {
+    border-bottom: 1px solid transparent;
+    top: 45px;
+    right: 0px;
+}
+
+.brand:hover:before, .brand:hover:after {
+    width: 100%;
+    border-color: var(--heavy_pink);
+}

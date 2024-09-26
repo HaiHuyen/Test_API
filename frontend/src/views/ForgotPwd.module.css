@@ -1,0 +1,55 @@
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    border: 1px solid rgba(128, 128, 128, 0.566);
+    margin: auto;
+    padding: 30px;
+    cursor: context-menu;
+}
+
+.show {
+    visibility: visible;
+    animation: showDiv 250ms ease-in both;
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
+
+.email_section p {
+    color: grey;
+}
+
+.email_section input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin: 30px 0 30px 0;
+    padding-left: 10px;
+    border: 2px solid black;
+}
+
+.email_section input:focus {
+    outline: none;
+    caret-color: var(--heavy_pink);
+}
+
+.email_section input:invalid {
+    border-color: var(--heavy_pink);
+}
+
+.email_section button, .reset_btn {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 10px 0;
+    font-weight: 600;
+    background-color: black;
+    color: white;
+    margin-bottom: 20px;
+}

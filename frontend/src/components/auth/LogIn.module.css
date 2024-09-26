@@ -1,0 +1,248 @@
+* {
+    --signature_color: #d1e7dd;
+}
+
+.wrapper, .confirm_wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    border: 1px solid rgba(128, 128, 128, 0.566);
+    margin: auto;
+    padding: 30px;
+}
+
+.wrapper h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+    cursor: context-menu;
+    font-family: 'Satisfy', cursive;
+}
+
+.choice {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.choice button {
+    width: 150px;
+    padding: 10px;
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+.choice button:hover {
+    transition: all 0.4s;
+    /* background-color: black; */
+    color: var(--heavy_pink);
+}
+
+.body {
+    position: relative;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.body a {
+    color: black;
+}
+
+.signin {
+    margin-top: 40px;
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.wrapper_register {
+    margin-top: 15px;
+}
+
+.columnSignIn {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.columnSignIn label {
+    margin-bottom: 0;
+}
+
+.columnSignIn span {
+    font-size: 1.2em;
+    font-family: 'Satisfy', cursive;
+}
+
+.btn {
+    border: none;
+    outline:  none;
+    width: 100%;
+    padding: 10px 0;
+    background-color: black;
+    color: white;
+    box-shadow: 2px 4px 7px var(--signature_color);
+    margin-bottom: 10px;
+}
+
+.btn:hover {
+    color: var(--heavy_pink);
+    box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.107);
+}
+
+/* register */
+.register {
+    margin-top: 40px;
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.columnRegister {
+    display: grid;
+    grid-template-rows: repeat(6, auto);
+    gap: 30px;
+}
+
+.term {
+    display: flex;
+    justify-content: center;
+    color: black;
+    position: relative;
+}
+
+.term input {
+    margin-right: 10px;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    opacity: 0;
+}
+
+.term label {
+    display: inline-block;
+    position: absolute;
+    left: 65px;
+    top: 3px;
+    cursor: pointer;
+    color: transparent;
+    width: 100%;
+}
+
+.term label:before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 1px solid black;
+    z-index: 99;
+    margin-right: 10px;
+}
+
+.term input:checked + label:before{
+    content: '\2713';
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    font-size: 14px;
+    color: white;
+}
+
+.term p {
+    cursor: pointer;
+}
+
+@keyframes showDiv {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.show {
+    visibility: visible;
+    animation: showDiv 250ms ease-in both;
+}
+
+/* invalid */
+.invalid {
+    position: relative;
+    display: block;
+}
+
+.invalid:focus {
+    outline: none;
+    border-color: 2px red !important;
+    box-shadow: 0 0 0 4px rgba(255, 0, 0, 0.283) !important;
+}
+
+.warning {
+    color: red;
+    font-size: 0.9rem;
+    font-style: italic;
+    margin: 0;
+    padding-bottom: 3px;
+}
+
+.showRegister, .forgotPass_btn {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    padding: 0 10px;
+    color: var(--heavy_pink);
+    text-decoration: underline;
+}
+
+/* otp input */
+.confirm_wrapper p {
+    color: grey;
+    cursor: context-menu;
+}
+
+.verify_btn, .sent_btn {
+    outline: none;
+    border: none;
+}
+
+.verify_btn {
+    margin-top: 30px;
+    background-color: black;
+    color: white;
+    width: 300px;
+    height: 40px;
+    margin-bottom: 30px;
+}
+
+.otp_wrap {
+    height: 80px;
+}
+
+.otp_wrap input {
+    display: block;
+    height: 40px;
+    width: 40px;
+    margin: 0 10px 0 10px;
+    padding-left: 10px;
+    border: 1px solid transparent;
+    border-bottom: 1px solid black;
+}
+
+.otp_wrap input:focus {
+    outline: none;
+    border-bottom: 1px solid var(--heavy_pink);
+    caret-color: var(--heavy_pink);
+}
+
+.sent_btn {
+    background-color: transparent;
+    color: var(--heavy_pink);    
+    text-decoration: underline;
+}

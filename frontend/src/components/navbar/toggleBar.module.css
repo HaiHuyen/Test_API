@@ -1,0 +1,17 @@
+.container {
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+}
+
+.toggleBar {
+    margin: auto;
+    padding: 0 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    height: 90px;
+    z-index: 99;
+    max-width: 800px;
+    background-color: white;
+}
